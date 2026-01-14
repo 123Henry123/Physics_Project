@@ -1,99 +1,189 @@
-<html>
-  <head>
-    <div id="top" style="width: 1820px; height: 150px; background-color: aqua; margin-bottom: 10px;">
-  </head>
-    <h1 style="margin-left: 10px;">Physics</h1>
-    <body>
-        <h1 style="margin-left: 10px;"><span style="color:red;">Does Clash Roy</span><span style="color:magenta;">ale use real</span><span style="color:blue;">istic physics?<span>
-          </h1>
-            <h3 style="margin-left: 10px;">Mostly mechanics (things that are observable)</h3>
-            </div>
-            <div id="info-about-clash" style="position: absolute; width: 400px; background-color: blue;">
-            <h1 style="margin-left: 25px;">Info about Clash Royale</h1>
-            <img src="local_images/arena.jpg" width="350px" style="margin: 25px;">
-            <h3 style="margin: 10px;">This is your standard Clash Royale arena! it has a total of 548 playable 
-                tiles, but some arenas have 528 playable tiles. The idea of the game is to place troops in these 
-                tiles and attempt to destroy your opponents crown towers. Determining the dimensions of these tile will 
-                be a crucial step in finding out if Clash Royale has realistic physics.
-            </h3>
-            <h3 style="margin: 10;">According to the following images a hog is approximately 1.8 tiles long. 
-              I did some research and found out that the hogs in Clash Royale are most likely "Domestic pigs"
-              which vary in size from 90-180cm in length. On average they are 135 cm in length.
-            </h3>
-            <img src="local_images/hog_backview.jpeg" width="350px" style="margin: 25px;">
-            <h3 style="margin: 10px;">Through simple algebra I have deduced that one tile is approximately 75cm in length and width.</h3>
-            </div>
-            <div id="Experiments" style="position: absolute; left: 400px; top: 150px; margin: 20; width: 500; background-color: blueviolet;">
-              <h1 style="margin: 10px;">Experiments</h1>
-              <h2 style="margin: 10px;">Kinematics</h2>
-              <h3 style="margin: 10px;">distance and displacement</h3>
-              <iframe width="500" height="315" src="https://www.youtube-nocookie.com/embed/rTlYpcek8qA?si=IYfGMpkjlrng96I7" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>            
-            <!--videos may not work on certain browers or if you have browser extensions-->
-              <br><br><h3 style="margin: 10px;">Acceleration, velocity, and speed</h3>
-    <iframe width="500" height="315" src="https://youtube.com/embed/o98t544MY_w?si=2-YnGs3jMZzOxxqG" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-    <p style="margin: 10px;">A prince is placed onto the board. There is a 1 second delay before it starts moving at a speed of
-    xtiles/s before accelerating to a speed of ytiles/s a while later it encounters a hog rider after 
-    crossing a bridge that was 2 tiles long and instatnly comes to a halt to attack it. The hog rider 
-    survives on 1 hpand runs past the prince causing the prince to chase it in the opposite direction.
-    The prince starts slow but accelerates to an increased speed before the hog rider meets the terrible fate
-    of being unalived by a tower. Following that the prince nimbly makes a 180 degree turn without losing speed.
-    The prince then continues to move at a constant velocity until it crosses the bridge and makes a sharp 90 degree
-    turn while maintaining the same speed it eventually collides with an enemy mortar bring it to a complete stop.<br><br>
-    With the given information answer the following questions:<br><br>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Physics & Clash Royale</title>
+<style>
+  /* Basic Reset & Typography */
+  body { font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin:0; padding:0; background:#f8f9fa; color:#333; text-align: left; }
+  
+  /* Utility IDs (formerly container) */
+  #heroContainer, #mainContent { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+  
+  /* Card Styles (mapped to existing IDs) */
+  #infoSection, #experimentsSection, #observationsSection, #bibliography { background:white; border-radius:15px; padding:30px; box-shadow:0 5px 20px rgba(0,0,0,0.05); margin-bottom:30px; transition: transform 0.2s; }
+  #infoSection:hover, #experimentsSection:hover, #observationsSection:hover, #bibliography:hover { transform: translateY(-3px); box-shadow: 0 10px 25px rgba(0,0,0,0.1); }
+  
+  /* Typography */
+  h1, h2, h3 { color:#2d3748; margin-top:0; }
+  h1 { font-size:2rem; margin-bottom:1rem; border-bottom: 2px solid #667eea; display:inline-block; padding-bottom:5px; }
+  h2 { font-size:1.5rem; color:#667eea; margin-top:20px; }
+  h3 { font-size:1.1rem; font-weight:600; margin-bottom:0.5rem; }
+  p { line-height:1.6; color:#4a5568; margin-bottom:15px; }
+  
+  /* Buttons (mapped to specific IDs) */
+  #ctaBtn, #answerABtn, #answerBBtn, #mechanicsLink { background:linear-gradient(135deg, #667eea 0%, #764ba2 100%); color:white; border:none; padding:10px 25px; border-radius:25px; cursor:pointer; font-weight:600; font-size:0.95rem; transition:opacity 0.2s, transform 0.1s; box-shadow:0 4px 6px rgba(0,0,0,0.1); }
+  #ctaBtn:hover, #answerABtn:hover, #answerBBtn:hover, #mechanicsLink:hover { opacity:0.9; transform: translateY(-1px); }
+  #ctaBtn:active, #answerABtn:active, #answerBBtn:active, #mechanicsLink:active { transform: translateY(1px); }
+  
+  /* Images & Videos */
+  img { max-width:100%; border-radius:8px; box-shadow:0 2px 8px rgba(0,0,0,0.1); margin-bottom:15px; }
+  video { width:100%; border-radius:8px; box-shadow:0 2px 8px rgba(0,0,0,0.1); margin: 15px 0; background:black; }
+
+  /* Layout Grid */
+  #gridLayout { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top:40px; }
+  
+  /* Specific Section Styles */
+  #heroSection { background:linear-gradient(135deg, #667eea 0%, #764ba2 100%); color:white; padding:100px 20px; text-align:center; }
+  #heroTitle { font-size:3.5rem; text-shadow:2px 2px 4px rgba(0,0,0,0.2); margin-bottom:20px; }
+  #heroSubtitle { font-size:1.3rem; opacity:0.9; max-width:600px; margin:0 auto 40px; line-height:1.6; }
+  #ctaBtn { background:white; color:#667eea; padding:15px 40px; font-size:1.1rem; border-radius:30px; font-weight:bold; box-shadow:0 4px 15px rgba(0,0,0,0.2); }
+  #ctaBtn:hover { transform: scale(1.05); box-shadow: 0 6px 20px rgba(0,0,0,0.25); }
+
+  #footer { background:#2d3748; color:white; text-align:center; padding:40px 20px; margin-top:50px; }
+  
+  /* Experiment specific */
+  #experimentBlock { border-left: 4px solid #764ba2; padding-left: 15px; margin-top: 25px; background: #fcfcfc; padding: 15px; border-radius: 0 8px 8px 0; }
+  #AnswerA, #AnswerB { background:#eef2f7; padding:15px; border-radius:8px; margin-top:10px; border:1px solid #cbd5e0; }
+</style>
+</head>
+<body>
+
+  <!-- Hero Section -->
+  <div id="heroSection">
+    <div id="heroContainer">
+      <h1 id="heroTitle">Does clash royale have realistic physics?</h1>
+      <p id="heroSubtitle">Let's play som AHEM AHEM do some research to find relations between game and reality</p>
+      <button id="ctaBtn">Physics</button>
+    </div>
+  </div>
+
+  <!-- Main Content Section -->
+  <div id="mainContent">
+    
+    <!-- Introduction Header -->
+    <div style="margin-top:50px; text-align:center;">
+      <h1>Physics</h1>
+      <h3><span style="color:#e53e3e;">Does Clash Roy</span><span style="color:#d53f8c;">ale use real</span><span style="color:#3182ce;">istic physics?</span></h3>
+      <p>Mostly mechanics (things that are move)</p>
+    </div>
+
+    <div id="gridLayout">
       
-    a) what was the average velocity of the prince since it got placed(in tiles/s)? Round to 2 decimal numbers<br>
-      </p>
-    <button id="buttonA" onclick="showAnswerA()" style="margin: 10px;">show answer</button>
-        <p id="AnswerA" style="display: none; margin: 10px;">I counted 24 tiles in a span of 16 seconds so 24/16 = 1.5 tiles/s</p>
-      <script>
-        function showAnswerA() {
-          const answer = document.getElementById("AnswerA")
-          const button = document.getElementById("buttonA")
-          if (answer.style.display === "none") {
-            answer.style.display = "block";
-            button.textContent = "hide answer";
-          } else {
-            answer.style.display = "none";
-            button.textContent = "show answer";
-          }
-        }
-        </script>
-      <p style="margin: 10px;"><br>b) how many times did the prince accelerate (in the positive or negative direction)?</p>
-    <button id="buttonB" onclick="showAnswerB()" style="margin: 10px;">show answer</button>
-        <p id="AnswerB" style="display: none; margin: 10px;">10 times (if you pay close attention you will notice when it turns towards the mortar it performed 3 separate turns which I counted as changing acceleration 3 times.)</p>
-      <script>
-        function showAnswerB() {
-          const answer = document.getElementById("AnswerB")
-          const button = document.getElementById("buttonB")
-          if (answer.style.display === "none") {
-            answer.style.display = "block";
-            button.textContent = "hide answer";
-          } else {
-            answer.style.display = "none";
-            button.textContent = "show answer";
-          }
-        }
-      </script>
-      <h3 style="margin: 10px;">vectors</h3>
-      <iframe width="500" height="315" src="https://www.youtube.com/embed/sRB8YnCSAdo?si=NaFjxe_j9EH9LTcU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-      <p style="margin: 10px;">Observe the movements of the hog rider in the arena. It travels at a constant speed but at an inconsistent direction. 
-        Thus creating 3 separate vectors which we can combine to find its average velocity and speed. Since we are given its x (width of arena) 
-        and its y (length of the arena) magnitude as well as the time it took to reach the tower. With these pieces we can quantify the movements of the hog rider.
-      </p>
-    </div>
-    <div id="Observations" style="position: absolute; left: 910px; top: 150px; margin: 20px; width: 500;  background-color: red;">
-      <h1 style="margin: 10px;">Observations</h1>
-      <h2>Momentum</h2>
-      <video src="local_videos/Momentum1_12-18-2025-8-54-50-AM_1-2.mp4" controls style="width: 500px;"></video>
-      <p style="margin: 10px;">While playing some games I noticed certain troops show signs of the law of conservation of mass.
-        These two troops demonstrated Newton's third law, the recoil law. When they launched their respective projectiles they would shift backwards
-        a fraction of a tile(experience recoil).<br>Can you guess which ones?</p>
-    </div>
-      <div id="sources" style="position: absolute; top: 400%; width: 100lh; margin: 25; background-color: black;">
-        <h2>sources</h2><br>
-        <p>https://www.dimensions.com/element/domestic-pig</p>
+      <!-- Info about Clash Royale -->
+      <div id="infoSection">
+        <h1>Info about Clash Royale</h1>
+        <img src="local_images/arena.jpg" alt="Clash Royale Arena" onerror="this.src='https://placehold.co/600x400?text=Arena+Image'">
+        <p>This is your standard Clash Royale arena! It has a total of 548 playable tiles, but some arenas have 528 playable tiles. The idea of the game is to place troops in these tiles and attempt to destroy your opponents crown towers. Determining the dimensions of these tiles will be a crucial step in finding out if Clash Royale has realistic physics.</p>
+        <p>According to the following images a hog is approximately 1.8 tiles long. I did some research and found out that the hogs in Clash Royale are most likely "Domestic pigs" which vary in size from 90-180cm in length. On average they are 135 cm in length.</p>
+        <img src="local_images/hog_backview.jpeg" alt="Hog Rider Dimensions" onerror="this.src='https://placehold.co/600x400?text=Hog+Rider'">
+        <p>Through simple algebra I have deduced that one tile is approximately 75cm in length and width.</p>
       </div>
-      <a style="margin-bottom: 100px;" href="https://perchance.org/qovs1fm7fv">More about mechanics here!</a>
-      
-    </body>
+
+      <!-- Experiments Section (Improved) -->
+      <div id="experimentsSection">
+        <h1>Experiments</h1>
+        
+        <div id="experimentBlock">
+          <h2>Kinematics</h2>
+          <h3>Distance and Displacement</h3>
+          <video controls poster="https://placehold.co/600x400?text=Distance">
+            <source src="local_videos/final copy for distance and dynamics.mov" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+          
+          <br>
+          <h3>Acceleration, Velocity, and Speed</h3>
+          <video controls style="height:auto; aspect-ratio:16/9;" poster="https://placehold.co/600x400?text=Acceleration">
+            <source src="local_videos/Acceleration-after-editing.mov" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+          <p>A prince is placed onto the board. There is a 1 second delay before it starts moving at a speed of
+            xtiles/s before accelerating to a speed of ytiles/s a while later it encounters a hog rider after 
+            crossing a bridge that was 2 tiles long and instantly comes to a halt to attack it. The hog rider 
+            survives on 1 hp and runs past the prince causing the prince to chase it in the opposite direction.
+             The prince starts slow but accelerates to an increased speed before the hog rider meets the terrible fate
+             of being unalived by a tower. Following that the prince nimbly makes a 180 degree turn without losing speed.
+            The prince then continues to move at a constant velocity until it crosses the bridge and makes a sharp 90 degree
+            turn while maintaining the same speed it eventually collides with an enemy mortar bring it to a complete stop.<br><br>
+            With the given information answer the following questions:</p>
+          <div style="margin-top:15px;">
+            <strong>a) What was the average velocity of the prince since it got placed (in tiles/s)? Round to 2 decimal numbers.</strong>
+            <br><br>
+            <button id="answerABtn" onclick="toggleAnswer('AnswerA', this)">Show Answer</button>
+            <div id="AnswerA" hidden>
+              I counted 24 tiles in a span of 16 seconds so 24/16 = 1.5 tiles/s
+            </div>
+          </div>
+          
+          <div style="margin-top:15px;">
+            <strong>b) How many times did the prince accelerate (in the positive or negative direction)?</strong>
+            <br><br>
+            <button id="answerBBtn" onclick="toggleAnswer('AnswerB', this)">Show Answer</button>
+            <div id="AnswerB" hidden>
+              10 times (if you pay close attention you will notice when it turns towards the mortar it performed 3 separate turns which I counted as changing acceleration 3 times.)
+            </div>
+          </div>
+
+          <h3>Vectors</h3>
+          <video controls style="height:auto; aspect-ratio:16/9;" poster="https://placehold.co/600x400?text=Vectors">
+            <source src="local_videos/vectors.mov" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+          <p>Observe the movements of the hog rider in the arena. It travels at a constant speed but at an inconsistent direction. Thus creating 3 separate vectors which we can combine to find its average velocity and speed.</p>
+        </div>
+      </div>
+
+      <!-- Observations Section -->
+      <div id="observationsSection">
+        <h1>Observations</h1>
+        <h2>Momentum</h2>
+        <video controls poster="https://placehold.co/600x400?text=Momentum">
+            <source src="local_videos/Momentum1_12-18-2025-8-54-50-AM_1-2.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <p>While playing some games I noticed certain troops show signs of the law of conservation of momentum. These two troops demonstrated Newton's third law, the recoil law. When they launched their respective projectiles they would shift backwards a fraction of a tile (experience recoil).</p>
+        <p><strong>Can you guess which ones?</strong></p><br><br><br>
+        <h1>Conclusion</h1>
+      </div>
+
+    </div>
+
+    <!-- bibliography -->
+    <div id="bibliography">
+        <h2>Sources</h2>
+        <div style="background:#2d3748; color:#a0aec0; padding:15px; border-radius:8px;">
+            <p style="margin:0; word-wrap:break-word;">https://www.dimensions.com/element/domestic-pig<br><br>https://clashroyale.fandom.com/wiki/Category:Troop_Cards</p></p>
+        </div>
+        <br>
+        <a href="https://perchance.org/qovs1fm7fv" id="mechanicsLink" style="display:inline-block; text-decoration:none; margin-top:10px;">More about mechanics here!</a>
+    </div>
+
+  </div>
+
+  <!-- Footer -->
+  <div id="footer">
+    <p>2025-2026 Physics Project for Mr. Koria's class</p>
+  </div>
+
+<script>
+  ctaBtn.onclick = () => {
+    document.getElementById('mainContent').scrollIntoView({ behavior: 'smooth' });
+  };
+
+  // Show and hide answer buttons
+  function toggleAnswer(answerId, btn) {
+    let answer = document.getElementById(answerId);
+    if (answer.hidden) {
+      answer.hidden = false;
+      btn.textContent = "Hide Answer";
+    } else {
+      answer.hidden = true;
+      btn.textContent = "Show Answer";
+    }
+  }
+</script>
+
+</body>
 </html>
