@@ -4,26 +4,27 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Physics & Clash Royale</title>
+<!-- had ai help with some of the styling -->
 <style>
-  /* Basic Reset & Typography */
+  /* Font and stuff */
   body { font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin:0; padding:0; background:#f8f9fa; color:#333; text-align: left; }
   
-  /* Utility IDs (formerly container) */
-  #heroContainer, #mainContent { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
   
-  /* Card Styles (mapped to existing IDs) */
+  #Container, #mainContent { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+  
+  /* Apply styles to the 4 sections */
   #infoSection, #experimentsSection, #observationsSection, #bibliography { background:white; border-radius:15px; padding:30px; box-shadow:0 5px 20px rgba(0,0,0,0.05); margin-bottom:30px; transition: transform 0.2s; }
   #infoSection:hover, #experimentsSection:hover, #observationsSection:hover, #bibliography:hover { transform: translateY(-3px); box-shadow: 0 10px 25px rgba(0,0,0,0.1); }
   
-  /* Typography */
+  /* Text */
   h1, h2, h3 { color:#2d3748; margin-top:0; }
-  h1 { font-size:2rem; margin-bottom:1rem; border-bottom: 2px solid #667eea; display:inline-block; padding-bottom:5px; }
-  h2 { font-size:1.5rem; color:#667eea; margin-top:20px; }
-  h3 { font-size:1.1rem; font-weight:600; margin-bottom:0.5rem; }
+  h1 { font-size:32px; margin: bottom 16px;; border-bottom: 2px solid #667eea; display:inline-block; padding-bottom:5px; }
+  h2 { font-size:26px; color:#667eea; margin-top:20px; }
+  h3 { font-size:18px; font-weight:600; margin-bottom:8px; }
   p { line-height:1.6; color:#4a5568; margin-bottom:15px; }
   
   /* Buttons (mapped to specific IDs) */
-  #ctaBtn, #answerABtn, #answerBBtn, #mechanicsLink { background:linear-gradient(135deg, #667eea 0%, #764ba2 100%); color:white; border:none; padding:10px 25px; border-radius:25px; cursor:pointer; font-weight:600; font-size:0.95rem; transition:opacity 0.2s, transform 0.1s; box-shadow:0 4px 6px rgba(0,0,0,0.1); }
+  #ctaBtn, #answerABtn, #answerBBtn, #mechanicsLink { background:linear-gradient(135deg, #667eea 0%, #764ba2 100%); color:white; border:none; padding:10px 25px; border-radius:25px; cursor:pointer; font-weight:600; font-size:16px; transition:opacity 0.2s, transform 0.1s; box-shadow:0 4px 6px rgba(0,0,0,0.1); }
   #ctaBtn:hover, #answerABtn:hover, #answerBBtn:hover, #mechanicsLink:hover { opacity:0.9; transform: translateY(-1px); }
   #ctaBtn:active, #answerABtn:active, #answerBBtn:active, #mechanicsLink:active { transform: translateY(1px); }
   
@@ -34,11 +35,11 @@
   /* Layout Grid */
   #gridLayout { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top:40px; }
   
-  /* Specific Section Styles */
-  #heroSection { background:linear-gradient(135deg, #667eea 0%, #764ba2 100%); color:white; padding:100px 20px; text-align:center; }
-  #heroTitle { font-size:3.5rem; text-shadow:2px 2px 4px rgba(0,0,0,0.2); margin-bottom:20px; }
-  #heroSubtitle { font-size:1.3rem; opacity:0.9; max-width:600px; margin:0 auto 40px; line-height:1.6; }
-  #ctaBtn { background:white; color:#667eea; padding:15px 40px; font-size:1.1rem; border-radius:30px; font-weight:bold; box-shadow:0 4px 15px rgba(0,0,0,0.2); }
+ 
+  #Section { background:linear-gradient(135deg, #667eea 0%, #764ba2 100%); color:white; padding:100px 20px; text-align:center; }
+  #Title { font-size:56px; text-shadow:2px 2px 4px rgba(0,0,0,0.2); margin-bottom:20px; }
+  #Subtitle { font-size:21px; opacity:0.9; max-width:600px; margin:0 auto 40px; line-height:1.6; }
+  #ctaBtn { background:white; color:#667eea; padding:15px 40px; font-size:18px; border-radius:30px; font-weight:bold; box-shadow:0 4px 15px rgba(0,0,0,0.2); }
   #ctaBtn:hover { transform: scale(1.05); box-shadow: 0 6px 20px rgba(0,0,0,0.25); }
 
   #footer { background:#2d3748; color:white; text-align:center; padding:40px 20px; margin-top:50px; }
@@ -50,19 +51,19 @@
 </head>
 <body>
 
-  <!-- Hero Section -->
-  <div id="heroSection">
-    <div id="heroContainer">
-      <h1 id="heroTitle">Does clash royale have realistic physics?</h1>
-      <p id="heroSubtitle">Let's play som AHEM AHEM do some research to find relations between game and reality</p>
+
+  <div id="Section">
+    <div id="Container">
+      <h1 id="Title">Does clash royale have realistic physics?</h1>
+      <p id="Subtitle">Let's play som AHEM AHEM do some research to find relations between game and reality</p>
       <button id="ctaBtn">Physics</button>
     </div>
   </div>
 
-  <!-- Main Content Section -->
+
   <div id="mainContent">
     
-    <!-- Introduction Header -->
+    <!-- intro -->
     <div style="margin-top:50px; text-align:center;">
       <h1>Physics</h1>
       <h3><span style="color:#e53e3e;">Does Clash Roy</span><span style="color:#d53f8c;">ale use real</span><span style="color:#3182ce;">istic physics?</span></h3>
@@ -71,7 +72,7 @@
 
     <div id="gridLayout">
       
-      <!-- Info about Clash Royale -->
+      <!-- info -->
       <div id="infoSection">
         <h1>Info about Clash Royale</h1>
         <img src="local_images/arena.jpg" alt="Clash Royale Arena" onerror="this.src='https://placehold.co/600x400?text=Arena+Image'">
@@ -79,9 +80,11 @@
         <p>According to the following images a hog is approximately 1.8 tiles long. I did some research and found out that the hogs in Clash Royale are most likely "Domestic pigs" which vary in size from 90-180cm in length. On average they are 135 cm in length.</p>
         <img src="local_images/hog_backview.jpeg" alt="Hog Rider Dimensions" onerror="this.src='https://placehold.co/600x400?text=Hog+Rider'">
         <p>Through simple algebra I have deduced that one tile is approximately 75cm in length and width.</p>
+        <br><br>
+        <p style="font-size: 67px; color: rgb(252, 252, 252);">THERE IS AN EASTER EGG</p>
       </div>
 
-      <!-- Experiments Section (Improved) -->
+      <!-- Experiments Section -->
       <div id="experimentsSection">
         <h1>Experiments</h1>
         
@@ -144,8 +147,34 @@
             Your browser does not support the video tag.
         </video>
         <p>While playing some games I noticed certain troops show signs of the law of conservation of momentum. These two troops demonstrated Newton's third law, the recoil law. When they launched their respective projectiles they would shift backwards a fraction of a tile (experience recoil).</p>
-        <p><strong>Can you guess which ones?</strong></p><br><br><br>
+        <p><strong>Can you guess which ones?</strong></p>
+        <p>If you guessed any of the following you would be correct!</p>
+        <br>
+        <img src="local_images/firecracker.jpeg" style="width: 150px;"> <img src="local_images/sparky.jpeg" style="width: 150px;">
+        <p>Although there are cards that do follow the rules of physics there are certain ones that kind of ignore them.</p>
+
+        <h2>The Fisherman!</h2>
+        <img src="local_images/Fisherman.jpeg">
+
+        <p>This card is called the fisherman. It uses its hook and pull all cards towards itself using the same amout of force. However,
+          this card completely ignores the fact that heavier units will have a higher force of friction so he just yoinks them all the same.
+        </p>
+
+        <br>
+        <br>
+
         <h1>Conclusion</h1>
+        <p>Throughout many hours of experimenting countless hours of observing and a few hours of actual research I have come to the comclusion
+          that Clash Royale is very good at combining the laws of physics with an immersive game. Although there may be certain cards that just 
+          do their own thing, most of the game uses realistic physics.</p><p style="font-size: 1px;">That is if we ignore all the spells 
+          in the game because they are super random and if they were taken into account then half the game would stop following the laws of physics. 
+          So, for the sake of this project we will ignore those and I will put this in really miniscule writting. I will now fill the rest here with
+          random text so it looks like a complete line under the intended text. While I'm at it I'll throw in the link to my chemistry project cause 
+          I'm bored the link is <a href="https://perchance.org/cookie-stoichiometry">as long as you click the blue part it will work</a> kinematics, dynamics, 
+          momentum, electric fields, magnetic fields, waves, sound, light.
+
+          </p>
+        
       </div>
 
     </div>
@@ -154,10 +183,11 @@
     <div id="bibliography">
         <h2>Sources</h2>
         <div style="background:#2d3748; color:#a0aec0; padding:15px; border-radius:8px;">
-            <p style="margin:0; word-wrap:break-word;">https://www.dimensions.com/element/domestic-pig<br><br>https://clashroyale.fandom.com/wiki/Category:Troop_Cards</p></p>
-        </div>
+            <p><a href="https://www.dimensions.com/element/domestic-pig" style="margin:1; word-wrap:break-word; color: wheat;" >https://www.dimensions.com/element/domestic-pig</a></p><br><br>
+            <p><a href="https://clashroyale.fandom.com/wiki/Category:Troop_Cards" style="margin:1; word-wrap:break-word; color: wheat">https://clashroyale.fandom.com/wiki/Category:Troop_Cards</a></p><br>
+            <p><a href="https://prezi.com/p/yoyyik8jmmre/the-physics-behind-clash-royale/" style="margin: 1; word-wrap:break-word; color: wheat;">https://prezi.com/p/yoyyik8jmmre/the-physics-behind-clash-royale/</a></p>
+          </div>
         <br>
-        <a href="https://perchance.org/qovs1fm7fv" id="mechanicsLink" style="display:inline-block; text-decoration:none; margin-top:10px;">More about mechanics here!</a>
     </div>
 
   </div>
