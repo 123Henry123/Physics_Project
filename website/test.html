@@ -4,7 +4,11 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Physics & Clash Royale</title>
+
+
 <!-- had ai help with some of the styling -->
+
+
 <style>
   /* Font and stuff */
   body { font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin:0; padding:0; background:#f8f9fa; color:#333; text-align: left; }
@@ -24,7 +28,7 @@
   p { line-height:1.6; color:#4a5568; margin-bottom:15px; }
   
   /* Buttons (mapped to specific IDs) */
-  #ctaBtn, #answerABtn, #answerBBtn, #mechanicsLink { background:linear-gradient(135deg, #667eea 0%, #764ba2 100%); color:white; border:none; padding:10px 25px; border-radius:25px; cursor:pointer; font-weight:600; font-size:16px; transition:opacity 0.2s, transform 0.1s; box-shadow:0 4px 6px rgba(0,0,0,0.1); }
+  #ctaBtn, #answerABtn, #answerBBtn, #mechanicsLink { background:linear-gradient(135deg, #d53232 0%, #3b5fd6 100%); color:white; border:none; padding:10px 25px; border-radius:25px; cursor:pointer; font-weight:600; font-size:16px; transition:opacity 0.2s, transform 0.1s; box-shadow:0 4px 6px rgba(0,0,0,0.1); }
   #ctaBtn:hover, #answerABtn:hover, #answerBBtn:hover, #mechanicsLink:hover { opacity:0.9; transform: translateY(-1px); }
   #ctaBtn:active, #answerABtn:active, #answerBBtn:active, #mechanicsLink:active { transform: translateY(1px); }
   
@@ -35,8 +39,8 @@
   /* Layout Grid */
   #gridLayout { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top:40px; }
   
- 
-  #Section { background:linear-gradient(135deg, #667eea 0%, #764ba2 100%); color:white; padding:100px 20px; text-align:center; }
+  a { margin:1; word-wrap:break-word; color: blue; }
+  #Section { background:linear-gradient(135deg, #dc3030 0%, #4557df 100%); color:white; padding:100px 20px; text-align:center; }
   #Title { font-size:56px; text-shadow:2px 2px 4px rgba(0,0,0,0.2); margin-bottom:20px; }
   #Subtitle { font-size:21px; opacity:0.9; max-width:600px; margin:0 auto 40px; line-height:1.6; }
   #ctaBtn { background:white; color:#667eea; padding:15px 40px; font-size:18px; border-radius:30px; font-weight:bold; box-shadow:0 4px 15px rgba(0,0,0,0.2); }
@@ -45,7 +49,7 @@
   #footer { background:#2d3748; color:white; text-align:center; padding:40px 20px; margin-top:50px; }
   
   /* Experiment specific */
-  #experimentBlock { border-left: 4px solid #764ba2; padding-left: 15px; margin-top: 25px; background: #fcfcfc; padding: 15px; border-radius: 0 8px 8px 0; }
+  #experimentBlock {padding-left: 15px; margin-top: 25px; background: #fcfcfc; padding: 15px; border-radius: 0 8px 8px 0; }
   #AnswerA, #AnswerB { background:#eef2f7; padding:15px; border-radius:8px; margin-top:10px; border:1px solid #cbd5e0; }
 </style>
 </head>
@@ -66,7 +70,7 @@
     <!-- intro -->
     <div style="margin-top:50px; text-align:center;">
       <h1>Physics</h1>
-      <h3><span style="color:#e53e3e;">Does Clash Roy</span><span style="color:#d53f8c;">ale use real</span><span style="color:#3182ce;">istic physics?</span></h3>
+      <h2><span style="background: linear-gradient(to right, red, blue); color: #ffffff; border-radius: 12px;">Does Clash Royale use realistic physics?</h2>
       <p>Mostly mechanics (things that are move)</p>
     </div>
 
@@ -84,7 +88,7 @@
         <p style="font-size: 67px; color: rgb(252, 252, 252);">THERE IS AN EASTER EGG</p>
       </div>
 
-      <!-- Experiments Section -->
+      <!-- Experiments -->
       <div id="experimentsSection">
         <h1>Experiments</h1>
         
@@ -93,14 +97,12 @@
           <h3>Distance and Displacement</h3>
           <video controls poster="https://placehold.co/600x400?text=Distance">
             <source src="local_videos/final copy for distance and dynamics.mov" type="video/mp4">
-            Your browser does not support the video tag.
           </video>
           
           <br>
           <h3>Acceleration, Velocity, and Speed</h3>
           <video controls style="height:auto; aspect-ratio:16/9;" poster="https://placehold.co/600x400?text=Acceleration">
             <source src="local_videos/Acceleration-after-editing.mov" type="video/mp4">
-            Your browser does not support the video tag.
           </video>
           <p>A prince is placed onto the board. There is a 1 second delay before it starts moving at a speed of
             xtiles/s before accelerating to a speed of ytiles/s a while later it encounters a hog rider after 
@@ -132,19 +134,17 @@
           <h3>Vectors</h3>
           <video controls style="height:auto; aspect-ratio:16/9;" poster="https://placehold.co/600x400?text=Vectors">
             <source src="local_videos/vectors.mov" type="video/mp4">
-            Your browser does not support the video tag.
           </video>
           <p>Observe the movements of the hog rider in the arena. It travels at a constant speed but at an inconsistent direction. Thus creating 3 separate vectors which we can combine to find its average velocity and speed.</p>
         </div>
       </div>
 
-      <!-- Observations Section -->
+      <!-- Observations -->
       <div id="observationsSection">
         <h1>Observations</h1>
         <h2>Momentum</h2>
         <video controls poster="https://placehold.co/600x400?text=Momentum">
             <source src="local_videos/Momentum1_12-18-2025-8-54-50-AM_1-2.mp4" type="video/mp4">
-            Your browser does not support the video tag.
         </video>
         <p>While playing some games I noticed certain troops show signs of the law of conservation of momentum. These two troops demonstrated Newton's third law, the recoil law. When they launched their respective projectiles they would shift backwards a fraction of a tile (experience recoil).</p>
         <p><strong>Can you guess which ones?</strong></p>
@@ -182,11 +182,20 @@
     <!-- bibliography -->
     <div id="bibliography">
         <h2>Sources</h2>
-        <div style="background:#2d3748; color:#a0aec0; padding:15px; border-radius:8px;">
-            <p><a href="https://www.dimensions.com/element/domestic-pig" style="margin:1; word-wrap:break-word; color: wheat;" >https://www.dimensions.com/element/domestic-pig</a></p><br><br>
-            <p><a href="https://clashroyale.fandom.com/wiki/Category:Troop_Cards" style="margin:1; word-wrap:break-word; color: wheat">https://clashroyale.fandom.com/wiki/Category:Troop_Cards</a></p><br>
-            <p><a href="https://prezi.com/p/yoyyik8jmmre/the-physics-behind-clash-royale/" style="margin: 1; word-wrap:break-word; color: wheat;">https://prezi.com/p/yoyyik8jmmre/the-physics-behind-clash-royale/</a></p>
+        <div style="display: flex; gap: 2%;">
+        <div style="background:#2d3748; color:#a0aec0; padding:15px; border-radius:8px; width: 49%;">
+            <h3 style="color: wheat;">links</h3>
+            <p><a href="https://www.dimensions.com/element/domestic-pig" >https://www.dimensions.com/element/domestic-pig</a></p><br>
+            <p><a href="https://clashroyale.fandom.com/wiki/Category:Troop_Cards" >https://clashroyale.fandom.com/wiki/Category:Troop_Cards</a></p><br>
+            <p><a href="https://prezi.com/p/yoyyik8jmmre/the-physics-behind-clash-royale/" >https://prezi.com/p/yoyyik8jmmre/the-physics-behind-clash-royale/</a></p>
           </div>
+        <div style="background:#2d3748; color:#a0aec0; padding:15px; border-radius:8px; width: 49%;">
+          <h3 style="color: wheat;">citations</h3>
+          <p style="color: red;">Bryan. (2022, November 10). Domestic pig (sus domesticus) dimensions & drawings. Domestic Pig (Sus domesticus). https://www.dimensions.com/element/domestic-pig <br>
+            Miles, S. (2025, June 17). The physics behind Clash Royale. prezi.com. https://prezi.com/p/yoyyik8jmmre/the-physics-behind-clash-royale/ <br>
+            Wiki, C. to C. R. (n.d.). Troop cards. Clash Royale Wiki. https://clashroyale.fandom.com/wiki/Category:Troop_Cards </p>
+        </div>
+        </div>
         <br>
     </div>
 
